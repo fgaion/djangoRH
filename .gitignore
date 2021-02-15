@@ -1,0 +1,8 @@
+.idea
+*.sqlite3
+venv
+0-*.txt
+*.pyc
+.DS_Store
+.vscode
+.env
