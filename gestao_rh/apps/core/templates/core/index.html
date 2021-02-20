@@ -8,7 +8,10 @@
     </div>
     <div class="col-sm">
       Olá {{ usuario.funcionario.nome }}
+      <br>
       <a href="{% url 'list_funcionarios' %}">Gerenciar Funcionario</a>
+      <br>
+      <a href="{% url 'list_departamentos' %}">Gerenciar Departamentos</a>
     </div>
     <div class="col-sm">
       <a href="{% url 'logout' %}">Logout</a>
