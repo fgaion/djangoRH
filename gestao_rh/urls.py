@@ -16,11 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('', include('gestao_rh.apps.core.urls')),
     path('funcionarios/', include('gestao_rh.apps.funcionarios.urls')),
     path('departamentos/', include('gestao_rh.apps.departamentos.urls')),
     path('empresas/', include('gestao_rh.apps.empresas.urls')),
+    path('documento/', include('gestao_rh.apps.documentos.urls')),
+    path('horas-extras/', include('gestao_rh.apps.registro_hora_extra.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

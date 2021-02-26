@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load bootstrap %}
 
 {% block main %}
 Edit Funcionario
@@ -6,10 +7,26 @@ Edit Funcionario
 <form method="POST">
     {% csrf_token %}
 
-    {{ form }}
+    {{ form|bootstrap }}
 
     <button type="submit">Salvar</button>
 </form>
+<br><br>
+<h2>Documentos</h2>
+<ul>
+{% for documento in object.documento_set.all %}
+    <li>
+        <a href="{{ documento.arquivo.url }} "> {{ documento.descricao }}  </a><br>
+    </li>
+{% endfor %}
+</ul>
+
+<br><br>
+{% if object %}
+<a href="{% url 'create_documento' object.id %}" class="btn btn-success">
+    Adicionar documento
+</a>
+{% endif %}
 
 {% endblock %}
 

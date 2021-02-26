@@ -1,0 +1,50 @@
+arabic-reshaper==2.0.15
+asgiref @ file:///tmp/build/80754af9/asgiref_1605055780383/work
+astroid @ file:///tmp/build/80754af9/astroid_1592495912941/work
+boto==2.49.0
+botocore @ file:///tmp/build/80754af9/botocore_1603297996270/work
+brotlipy==0.7.0
+certifi==2020.6.20
+cffi @ file:///tmp/build/80754af9/cffi_1600699146221/work
+configparser @ file:///home/conda/feedstock_root/build_artifacts/configparser_1602213867597/work
+cryptography @ file:///tmp/build/80754af9/cryptography_1601046815590/work
+dj-database-url==0.5.0
+dj-static==0.0.6
+Django @ file:///tmp/build/80754af9/django_1605066529526/work
+django-bootstrap-form==3.4
+django-bootstrap4==1.1.1
+django-debug-toolbar @ file:///home/conda/feedstock_root/build_artifacts/django-debug-toolbar_1606988325352/work
+django-storages==1.8
+docutils==0.15.2
+future @ file:///home/conda/feedstock_root/build_artifacts/future_1605203480611/work
+html5lib @ file:///home/conda/feedstock_root/build_artifacts/html5lib_1592930327044/work
+idna @ file:///tmp/build/80754af9/idna_1593446292537/work
+isort @ file:///tmp/build/80754af9/isort_1602603989581/work
+jmespath @ file:///tmp/build/80754af9/jmespath_1594304593830/work
+lazy-object-proxy==1.4.3
+mariadb==1.0.5
+mccabe==0.6.1
+olefile==0.46
+Pillow @ file:///tmp/build/80754af9/pillow_1602788711040/work
+psycopg2 @ file:///tmp/build/80754af9/psycopg2_1594305108220/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+pylint @ file:///tmp/build/80754af9/pylint_1598623985952/work
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
+PyPDF2==1.26.0
+PySocks==1.7.1
+pystache==0.5.4
+python-bidi==0.4.2
+python-dateutil==2.8.1
+python-decouple==3.3
+pytz==2020.1
+reportlab==3.5.55
+s3transfer==0.3.3
+six==1.15.0
+sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
+static==1.1.1
+static3==0.7.0
+toml @ file:///tmp/build/80754af9/toml_1592853716807/work
+urllib3 @ file:///tmp/build/80754af9/urllib3_1603305693037/work
+webencodings==0.5.1
+wrapt==1.11.2
+xhtml2pdf @ file:///home/conda/feedstock_root/build_artifacts/xhtml2pdf_1603382373480/work
