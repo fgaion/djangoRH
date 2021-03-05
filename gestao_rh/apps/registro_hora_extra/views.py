@@ -1,6 +1,9 @@
 #arquivo registro_hora_extra/views.py
 from django.shortcuts import render
+
+from django.http import HttpResponse
 from django.urls import reverse_lazy
+from django.views import View
 
 from .forms import RegistroHoraExtraForm
 from .models import RegistroHoraExtra
