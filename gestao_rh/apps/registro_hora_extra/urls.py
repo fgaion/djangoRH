@@ -1,4 +1,5 @@
 #arquivo registro_hora_extra/urls.py
+
 from django.urls import path
 from .views import (
     HoraExtraList,
