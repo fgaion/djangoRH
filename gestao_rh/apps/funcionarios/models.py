@@ -24,7 +24,9 @@ class Funcionario(models.Model):
     def total_horas_extra(self):
         #aggregate retorna uma lista com 2 elm [ 'horas__sum' : Decimal(<valor da soma>) ]
         total = 0
-        total = self.registrohoraextra_set.aggregate(Sum('horas'))['horas__sum']
-        return total
-        #return total or 0
+        #total = self.registrohoraextra_set.aggregate(Sum('horas'))['horas__sum']
+        total = self.registrohoraextra_set.filter(
+            utilizada=False).aggregate(
+            Sum('horas'))['horas__sum']
+        return total or 0
 

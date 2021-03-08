@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% load bootstrap %}
 
 {% block main %}
@@ -8,13 +8,37 @@
     {% csrf_token %}
 
     {{ form|bootstrap }}
-    <button type="submit" class="btn btn-main" >Salvar</button>
+    <br>
+    <button type="submit" class="btn btn-info" >Salvar</button>
 
     {% if object %}
     <a href="{% url 'delete_hora_extra' object.id %}" class="btn btn-danger">
             Deletar
         </a>
     {% endif %}
+
+    <!-- como pegar outro parametro por ex CampoX no funcoes-ajax.js
+    <input type="text" id="CampoX">
+    -->
+
+    <button onclick="utilizouHoraExtra({{ object.id }})"
+            class="btn btn-info" type="button">
+        (Des)Marcar como utilizada
+    </button>
+
 </form>
 
+<!-- testar função ajax
+<button onclick="teste()">Testar</button>
+-->
+
+<br>
+<h2 id="mensagem"></h2>
+<h2 id="horas_atualizadas"> Total Horas Extras não utilizadas: {{ object.funcionario.total_horas_extra }}</h2>
+
+{% endblock %}
+
+{% block static %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/funcoes-ajax.js' %}"></script>
 {% endblock %}

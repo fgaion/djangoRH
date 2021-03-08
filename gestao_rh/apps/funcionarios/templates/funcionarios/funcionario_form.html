@@ -9,8 +9,11 @@
 
     {{ form|bootstrap }}
 
-    <button type="submit">Salvar</button>
+    <button type="submit" class="btn btn-info">Salvar</button>
 </form>
+<br>
+<a href="{% url 'list_funcionarios' %}" class="btn btn-info"> Cancelar </a>
+
 <br><br>
 <h3>Documentos</h3>
 <ul>
@@ -34,7 +37,9 @@
 {% for registro_hora in object.registrohoraextra_set.all %}
     <li>
         <a href="{% url 'update_hora_extra' registro_hora.id %}">
-            {{ registro_hora.motivo  }} : {{ registro_hora.horas }} <br>
+            {{ registro_hora.motivo  }} :
+            {{ registro_hora.horas }} :
+            Utilizada: {{ registro_hora.get_hora_utilizada }} <br>
         </a>
     </li>
 {% endfor %}

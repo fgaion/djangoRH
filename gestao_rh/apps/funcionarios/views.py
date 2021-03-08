@@ -36,11 +36,12 @@ class FuncionarioNovo(CreateView):
     #overhide método django
     def form_valid(self, form):
         funcionario = form.save(commit=False) #false para não atualizar bd por enquanto
-		#TODO codigo abaixo dá erro se funcionario tiver um único nome
         listaNomes = funcionario.nome.split(' ')
         username = listaNomes[0]
         if ( len(listaNomes) > 1):
             username += listaNomes[1]
+        else:
+            username += "User"
         funcionario.empresa = self.request.user.funcionario.empresa
         funcionario.user = User.objects.create(username=username)
         funcionario.save()
