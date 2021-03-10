@@ -20,6 +20,10 @@ class Funcionario(models.Model):
     def get_absolute_url(self):
         return reverse('list_funcionarios')
 
+    def get_lista_horas_extra(self):
+        lista_horas = self.registrohoraextra_set.all()
+        return lista_horas
+
     @property
     def total_horas_extra(self):
         #aggregate retorna uma lista com 2 elm [ 'horas__sum' : Decimal(<valor da soma>) ]

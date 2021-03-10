@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block staticcss %}
+    <style>
+        .teste { color: red; }
+    </style>
+{% endblock %}
+
+{% block main %}
+    <h1 class="teste">Meu relatorio</h1>
+    {% for func in funcionarios %}
+        <h3> {{ func.nome }} : {{ func.total_horas_extra }} </h3>
+    {% endfor %}
+
+
+{% endblock %}
