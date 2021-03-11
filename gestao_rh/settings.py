@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'gestao_rh.apps.empresas',
     'gestao_rh.apps.funcionarios',
     'gestao_rh.apps.departamentos',
