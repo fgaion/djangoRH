@@ -22,9 +22,14 @@ from django.conf.urls.static import static
 from rest_framework import routers
 from gestao_rh.apps.core import views
 
+from gestao_rh.apps.funcionarios.api.views import FuncionarioViewSet
+from gestao_rh.apps.registro_hora_extra.api.views import RegistroHoraExtraViewSet
+
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'api/users', views.UserViewSet)
+router.register(r'api/groups', views.GroupViewSet)
+router.register(r'api/funcionarios', FuncionarioViewSet)
+router.register(r'api/banco-horas', RegistroHoraExtraViewSet)
 
 
 urlpatterns = [
