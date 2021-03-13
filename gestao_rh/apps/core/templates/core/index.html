@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block main %}
+  <H1>Sistema de Gestão de Funcionários</H1>
   <h2>Seja bem vindo (core/index.html)</h2>
   <div class="row">
     <div class="col-sm">
-      Seja bem vindo!
+      Seja bem vindo(a)! <br>
+      Olá {{ usuario.funcionario.nome }}
     </div>
     <div class="col-sm">
-      Olá {{ usuario.funcionario.nome }}
+      Escolha uma opção:
       <br>
       <a href="{% url 'list_funcionarios' %}">Gerenciar Funcionario</a>
       <br>
