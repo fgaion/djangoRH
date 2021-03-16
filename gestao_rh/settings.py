@@ -156,7 +156,7 @@ CELERY_TASK_SERIALIZER = 'json'
 EMAIL_HOST = 'smtps.uhserver.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'contato@fgaion.com.br'
-EMAIL_HOST_PASSWORD = 'nGBi6taK'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
