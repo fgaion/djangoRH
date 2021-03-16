@@ -151,3 +151,15 @@ CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
+
+#email uolhost do domínio fgaion.com.br
+EMAIL_HOST = 'smtps.uhserver.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'contato@fgaion.com.br'
+EMAIL_HOST_PASSWORD = 'nGBi6taK'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#para direcionar os emails no console
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
