@@ -25,7 +25,7 @@ def send_relatorio():
     total = Funcionario.objects.all().count()
     send_mail(
         'Relatorio Celery (delay)',
-        'Relatorio geral de funcionarios %f' % total,
+        'Relatorio geral de funcionarios (beat) %f' % total,
         'contato@fgaion.com.br',
         ['fabiogaion@gmail.com'],
         fail_silently=False,

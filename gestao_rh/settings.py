@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'gestao_rh.apps.registro_hora_extra',
     'gestao_rh.apps.core',
     'bootstrapform',
-    'django_celery_results'
+    'django_celery_results',
+    'django_celery_beat'
 ]
 
 MIDDLEWARE = [
@@ -152,7 +153,11 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 
-#email uolhost do domínio fgaion.com.br
+#email uolhost do domínio fgaion.com.br definidos no
+#arquivo servemail.py - para não expor senhas
+from gestao_rh.servemail import *
+
+"""
 EMAIL_HOST = 'smtps.uhserver.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'contato@fgaion.com.br'
@@ -163,3 +168,4 @@ EMAIL_USE_SSL = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 #para direcionar os emails no console
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+"""
