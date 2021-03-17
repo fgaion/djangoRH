@@ -24,7 +24,10 @@ from decouple import config
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','3.139.38.234']
+ALLOWED_HOSTS = ['localhost','127.0.0.1',
+                 '3.139.38.234',
+                 'rh.fgaion.com.br',
+                 ]
 
 
 # Application definition
@@ -157,15 +160,3 @@ CELERY_TASK_SERIALIZER = 'json'
 #arquivo servemail.py - para não expor senhas
 from gestao_rh.servemail import *
 
-"""
-EMAIL_HOST = 'smtps.uhserver.com'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = 'contato@fgaion.com.br'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = True
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#para direcionar os emails no console
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-"""
