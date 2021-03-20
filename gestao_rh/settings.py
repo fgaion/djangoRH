@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'gestao_rh.apps.core',
     'bootstrapform',
     'django_celery_results',
-    'django_celery_beat'
+    'django_celery_beat',
+    'gestao_rh.apps.app_antiga'
 ]
 
 MIDDLEWARE = [
@@ -86,12 +87,8 @@ WSGI_APPLICATION = 'gestao_rh.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#DATABASES = {   EM local_settings,py
+
 
 
 # Password validation
@@ -151,12 +148,16 @@ LOGOUT_REDIRECT_URL = 'login'
 
 CELERY_RESULT_BACKEND = 'django-db'
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
+#CELERY uma linha em local_settings.py
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 
+DATABASE_ROUTERS = ['gestao_rh.DBRoutes.DBRoutes']
+
+#EMAIL SETTINGS em local_settings.py
+
 #email uolhost do domínio fgaion.com.br definidos no
 #arquivo servemail.py - para não expor senhas
-from gestao_rh.servemail import *
+from gestao_rh.local_settings import *
 

@@ -9,7 +9,7 @@ static
 media
 uwsgi.ini
 uwsgi_params
-servemail.py
+local_settings.py
 *.bak
 *.dat
 *.pid
