@@ -9,6 +9,7 @@ from django.http import FileResponse
 import xhtml2pdf.pisa as pisa
 from django.template.loader import get_template
 from django.views.generic.base import View, TemplateView
+from django.utils.translation import gettext as _    #para gettext
 
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -25,6 +26,11 @@ def home(request):
 
 class FuncionariosList(ListView):
     model = Funcionario
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['report_button'] = _("Employee report")  #o _ é do import acima as _
+        return context
+
     #overrider método de query do django para listar somente os
     #funcionarios da mesma empresa do usuario logado
     def get_queryset(self):

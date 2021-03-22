@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block main %}
   <H1>Sistema de Gestão de Funcionários</H1>
   <h2>Seja bem vindo (core/index.html)</h2>
   <div class="row">
     <div class="col-sm">
-      Seja bem vindo(a)! <br>
-      Olá {{ usuario.funcionario.nome }}
+      {% trans "you are welcome!" %} <br>
+      {% trans "Hi" %}  {{ usuario.funcionario.nome }} <br>
+      {% trans "One of three columns" %} <br>
+      {% blocktrans %}
+      My big block of text
+      must be right here
+      Thanks!
+      {% endblocktrans %}
     </div>
     <div class="col-sm">
       Escolha uma opção:

@@ -12,10 +12,10 @@
     <br><br>
     <a href="{% url 'create_funcionario' %}" class="btn btn-info"> Novo </a>
     <a href="{% url 'relatorio_funcionarios' %}" class="btn btn-info">
-        Relatorio de Funcionarios (PDF)</a>
+        {{ report_button }} (PDF)</a>
     <a href="{% url 'relatorio_funcionarios_html' %}" class="btn btn-info">
-        Relatorio de Funcionarios (html)</a>
+        {{ report_button }} (html)</a>
     <a href="{% url 'relatorio_funcionarios_html_debug' %}" class="btn btn-danger">
-        Relatorio de Funcionarios (html debug)</a>
+        {{ report_button }} (html debug)</a>
 
 {% endblock %}
