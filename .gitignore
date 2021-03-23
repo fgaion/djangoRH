@@ -10,6 +10,7 @@ media
 uwsgi.ini
 uwsgi_params
 local_settings.py
+udemyCertificado
 *.bak
 *.dat
 *.pid

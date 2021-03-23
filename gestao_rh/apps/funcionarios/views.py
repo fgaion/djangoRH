@@ -39,7 +39,7 @@ class FuncionariosList(ListView):
 
 class FuncionarioEdit(UpdateView):
     model = Funcionario
-    fields = ['nome', 'departamentos']
+    fields = ['nome', 'departamentos','de_ferias']
 
 class FuncionarioDelete(DeleteView):
     model = Funcionario
@@ -60,6 +60,7 @@ class FuncionarioNovo(CreateView):
             username += "User"
         funcionario.empresa = self.request.user.funcionario.empresa
         funcionario.user = User.objects.create(username=username)
+        funcionario.de_ferias = False
         funcionario.save()
         return super(FuncionarioNovo, self).form_valid(form)
 
